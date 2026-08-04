@@ -35,6 +35,5 @@ flask-submit-demo/
 The Flask application defines two routes:  
 1. ``GET /``: Renders the index.html file from the templates/ directory.
 2. ``POST /run-script``: Listens for the form submission, executes custom Python code, and returns the result to the user.
-3. Paste the following generated python code to your app.py
-
+3. You can view the main application logic in [`app.py`](app.py).
   
