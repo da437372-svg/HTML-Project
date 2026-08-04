@@ -1,0 +1,18 @@
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    submitted_number = None
+    submitted_name   = None
+    if request.method == "POST":
+        # Retrieve name and number from form inputs
+        submitted_name   = request.form.get("name_input")
+        submitted_number = request.form.get("number_input")
+
+    # Pass both variables back to the template
+    return render_template("index.html", name=submitted_name, number=submitted_number)
+
+if __name__ == "__main__":
+    app.run(debug=True)
