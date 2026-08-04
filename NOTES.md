@@ -1,10 +1,39 @@
 # HTML-Project
-## Building A Student Website using HTML
+## A simple Flask web application demonstrating how to trigger a backend Python function using an HTML form submit button.
 
-## 🛠️ Step-by-Step Implementation Process
+## 📁 Project Structure
+For Flask to locate and render your HTML files correctly, you **must create a folder named `templates`** in your project root and place `index.html` inside it[cite: 1, 2].
 
-### 1. Local HTML Development & Debugging
-1. **Building Semantic HTML Structure:** Created standard pages using HTML tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, `<h1>`-`<h2>`, `<p>`, `<ul>`, `<ol>`, `<table>`).
-2. **Adding Navigation & Internal Links:** Formatted navigation menus and linked list items on `index.html` directly to target sub-pages (`about.html`, `projects.html`, `contact.html`).
-3. **Image Handling & Path Fixes:** * Resolved broken image links caused by file path mismatches, incorrect case extensions (`.JPG` vs `.jpg`), and missing project directory placement.
-   * Placed `student-photo.jpg` directly in the project root folder and embedded it using proper attributes (`src` and descriptive `alt` text).
+```text
+flask-submit-demo/
+│
+├── app.py              # Main Flask application logic
+└── templates/          # Folder required by Flask for HTML files
+    └── index.html      # Frontend HTML template
+```
+🛠️ How It Works
+1. HTML Form (templates/index.html)The frontend contains a simple <form> element. Setting method="POST" and pointing the action attribute to /run-script ensures that clicking the submit button sends a request to the backend route:
+   ```
+   HTML
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <title>Run Python Script</title>
+   </head>
+   <body>
+        <h1>Trigger Python Code</h1>
+
+   <!-- The form sends a POST request to /run-script when clicked-->
+   <from action="/run-script" method="POST">
+        <button type="submit">Submit and Run Python</button>
+     </form>
+   </body>
+   </html>
+   ```
+  ## Flask Backend (app.py)
+The Flask application defines two routes:  
+1. ``GET /``: Renders the index.html file from the templates/ directory.
+2. ``POST /run-script``: Listens for the form submission, executes custom Python code, and returns the result to the user.
+
+  
