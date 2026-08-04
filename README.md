@@ -29,4 +29,4 @@ The single Flask route (/) handles both GET and POST requests:
 2.POST Request: Extracted inputs from ` request.form.get()` (`name_input and number_input`) are stored and passed back into `render_template()` as the `name` and `number` variables to be rendered on screen.
 
 ## 3. Run a python code with a generated code from Chatgpt or such AI engines but for reference I will list one below
- * You can view the python code at [`app.py (2)`](app.py2). 
+ * You can view the python code at [`app.py2)`](app.py2). 
