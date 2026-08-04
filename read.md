@@ -37,3 +37,14 @@ The Flask application defines two routes:
 2. ``POST /run-script``: Listens for the form submission, executes custom Python code, and returns the result to the user.
 3. You can view the main application logic in [`app.py`](app.py).
   
+## 🚀 How to Run locally
+1. Install Flask (if not already installed):
+   ```
+   pip install flask
+   ```
+2. Run the app
+   ```
+   python app.py
+   ```
+3. Open in browser
+and Navigate to http://127.0.0.1:5000/ and click Submit and Run Python to execute the backend script.     
