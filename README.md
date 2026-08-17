@@ -21,7 +21,7 @@ flask-name-number-app/
 The HTML page contains two main sections styled as side-by-side boxes:
 * Input Box: Contains an HTML ` <form>` using ` method="POST" ` with inputs for ` name_input ` and ` number_input `.
 * Output Box : Uses Jinja2 conditional rendering `({% if name and number is not none %} ) ` to display the submitted values, or a fallback message if no data has been submitted yet.
-* You can View the generated HTML at [`HTML`](HTML_Code).
+* You can View the generated HTML at [`HTML Code`](HTML_Code).
 
 ## 2. Flask Backend
 The single Flask route (/) handles both GET and POST requests:
